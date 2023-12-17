@@ -1,4 +1,11 @@
 
+/* Target pages look like:
+* https://e-journal.iea.gov.ua/journal/index?journal=xxxxxx
+* https://e-journal.iea.gov.ua/journal/index?journal=XXXXXX&page=X&per-page=15
+* the script asks to enter 2 numbers: 1 - the ordinal number of the initial column, 
+* and 2 - the ordinal number of the last column, in the range of which it will calculate 
+* the arithmetic average for each student and download the list to a separate file.
+*/
 
 function downloadTextFile(text, filename) {
     const element = document.createElement('a');
