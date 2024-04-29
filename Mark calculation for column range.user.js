@@ -71,7 +71,7 @@ function calculateAverage(students) {
 	
     const results = students.map(student => {
         const grades = student.grades.slice(start - 1, finish); 
-        const filteredGrades = grades.filter(grade => grade !== ''); 
+        const filteredGrades = grades.filter(grade => grade !== '' && grade !== 'Н');
         const sum = filteredGrades.reduce((acc, curr) => acc + parseFloat(curr), 0); 
         const count = filteredGrades.length; // Кількість оцінок
 
