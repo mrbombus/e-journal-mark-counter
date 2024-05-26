@@ -85,9 +85,10 @@ function calculateAverage(students) {
         const sum = grades.reduce((acc, curr) => acc + parseFloat(curr), 0);
         const count = grades.length;
 
-	const average = Math.round(sum / count); 
+	const precise = (sum / count);
+        const average = Math.round(sum / count); 
 
-        return `${student.name} - ${average.toFixed(0)}`;
+        return `${average} -\t${student.name} -\t${precise.toFixed(2)}`; 
     });
 
     const data = results.join('\n');
