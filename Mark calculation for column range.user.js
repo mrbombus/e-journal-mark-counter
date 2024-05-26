@@ -75,9 +75,9 @@ function calculateAverage(students) {
         const sum = filteredGrades.reduce((acc, curr) => acc + parseFloat(curr), 0); 
         const count = filteredGrades.length; // Кількість оцінок
 
-        const average = sum / count; 
+        const average = Math.round(sum / count); 
 
-        return `${student.name} - ${average.toFixed(2)}`; 
+        return `${student.name} - ${average.toFixed(0)}`; 
     });
 
     const data = results.join('\n'); 
